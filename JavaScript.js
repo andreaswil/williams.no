@@ -13,40 +13,40 @@ var  cardsParent = document.querySelector("#hero-section-3");
 cardsParent.addEventListener("mouseover", mouseOverCardEvent);
 cardsParent.addEventListener("mouseout", mouseOutCardEvent);
 
-$(".menu-button").mouseover(mouseOverMenuButtonUnderline);
-$(".menu-button").mouseout(mouseOutMenuButtonUnderline);
-$(".underline").mouseover(mouseOverMenuButtonUnderline2);
-$(".underline").mouseout(mouseOutMenuButtonUnderline2);
+$(".menu-button").mouseover(mouseOverMenuButton);
+$(".menu-button").mouseout(mouseOutMenuButton);
+$(".underline").mouseover(mouseOverMenuButtonUnderline);
+$(".underline").mouseout(mouseOutMenuButtonUnderline);
+
+function mouseOverMenuButton(e) {
+    var children = e.target.children;
+    children[0].style.animationName = "borderWidth";
+    children[0].style.animationDuration = "0.2s";
+    children[0].style.height = "5px";
+  
+}
+
+function mouseOutMenuButton(e) {
+    var children = e.target.children;
+    children[0].style.animationName = "borderWidthOut";
+    children[0].style.animationDuration = "0.2s";
+    children[0].style.height = "0px";
+  
+}
 
 function mouseOverMenuButtonUnderline(e) {
-    var schmunderline = e.target.children;
-    schmunderline[0].style.animationName = "borderWidth";
-    schmunderline[0].style.animationDuration = "0.2s";
-    schmunderline[0].style.height = "5px";
+    var underline = e.currentTarget;
+    underline.style.animationName = "borderWidth";
+    underline.style.animationDuration = "0.2s";
+    underline.style.height = "5px";
   
 }
 
 function mouseOutMenuButtonUnderline(e) {
-    var schmunderline = e.target.children;
-    schmunderline[0].style.animationName = "borderWidthOut";
-    schmunderline[0].style.animationDuration = "0.2s";
-    schmunderline[0].style.height = "0px";
-  
-}
-
-function mouseOverMenuButtonUnderline2(e) {
-    var schmunderline = e.currentTarget;
-    schmunderline.style.animationName = "borderWidth";
-    schmunderline.style.animationDuration = "0.2s";
-    schmunderline.style.height = "5px";
-  
-}
-
-function mouseOutMenuButtonUnderline2(e) {
-    var schmunderline = e.currentTarget;
-    schmunderline.style.animationName = "borderWidthOut";
-    schmunderline.style.animationDuration = "0.2s";
-    schmunderline.style.height = "0px";
+    var underline = e.currentTarget;
+    underline.style.animationName = "borderWidthOut";
+    underline.style.animationDuration = "0.2s";
+    underline.style.height = "0px";
   
 }
    
