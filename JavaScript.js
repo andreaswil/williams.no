@@ -1,4 +1,5 @@
 /*eslint-env browser*/
+/*eslint-env jquery*/
 
 var cards = document.getElementsByClassName("infobox");
 var logos = document.getElementsByClassName("logos");
@@ -12,7 +13,6 @@ var  cardsParent = document.querySelector("#hero-section-3");
 cardsParent.addEventListener("mouseover", mouseOverCardEvent);
 cardsParent.addEventListener("mouseout", mouseOutCardEvent);
 
-var  menubuttonsParent = document.querySelector("#menu-buttons");
 $(".menu-button").mouseover(mouseOverMenuButtonUnderline);
 $(".menu-button").mouseout(mouseOutMenuButtonUnderline);
 $(".underline").mouseover(mouseOverMenuButtonUnderline2);
@@ -50,11 +50,6 @@ function mouseOutMenuButtonUnderline2(e) {
   
 }
    
-
-
-
-
-
 function mouseOverCardEvent(e) {
     if (e.target !== e.currentTarget) {
        cards[e.target.number].style.transform = "scale(1.2)";   
