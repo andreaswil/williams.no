@@ -1,3 +1,5 @@
+/*eslint-env browser*/
+
 var cards = document.getElementsByClassName("infobox");
 var logos = document.getElementsByClassName("logos");
 
@@ -39,18 +41,19 @@ function mouseOverMenuButtonEvent(e) {
 
 function mouseOutMenuButtonEvent(e) {
     if (e.target !== e.currentTarget) {
-    	var schmunderline = e.target.children;
+        var schmunderline = e.target.children;
         ButtonHoverOut(schmunderline[0]); 
     }
     e.stopPropagation();
 }
-
+/*eslint-disable*/
 function CardPopin() {
 	for (var i = 0; i < cards.length; ++i) {
 		var card = cards [i];
 		card.style.opacity = "100";
 	}
 }
+/*eslint-enable*/
 
 function ButtonHover(object) {
 	object.style.animationName = "borderWidth";
