@@ -1,18 +1,19 @@
 var cards = document.getElementsByClassName("infobox");
+var logos = document.getElementsByClassName("logos");
 
 for (var i = 0; i < cards.length; ++i) {
 	cards[i].number = i;
+    logos[i].number = i;
 }
 
 var  cardsParent = document.querySelector("#hero-section-3");
- cardsParent.addEventListener("mouseover", mouseOverCardEvent);
- cardsParent.addEventListener("mouseout", mouseOutCardEvent);
+cardsParent.addEventListener("mouseover", mouseOverCardEvent);
+cardsParent.addEventListener("mouseout", mouseOutCardEvent);
 
-var  menubuttonsParent = document.querySelector("#menu-buttons");
 var  menubuttonsParent = document.querySelector("#menu-buttons");
 menubuttonsParent.addEventListener("mouseover", mouseOverMenuButtonEvent);
 menubuttonsParent.addEventListener("mouseout", mouseOutMenuButtonEvent);
- 
+
 function mouseOverCardEvent(e) {
     if (e.target !== e.currentTarget) {
        cards[e.target.number].style.transform = "scale(1.2)";   
