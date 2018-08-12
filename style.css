@@ -173,7 +173,7 @@ body {
 	margin-right: 175px;
 }
 
-#hero-section-1-cardbox-text {
+.hero-section-1-cardbox-text {
 	display: flex;
 	width:360px;
 	font-family: apercu-regular,sans-serif;
