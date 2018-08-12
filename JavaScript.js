@@ -65,21 +65,6 @@ function mouseOutCardEvent(e) {
     e.stopPropagation();
 }
 
-function mouseOverMenuButtonEvent(e) {
-    if (e.target !== e.currentTarget) {
-       var schmunderline = e.target.children;
-       ButtonHover(schmunderline[0]);
-    }
-    e.stopPropagation();
-}
-
-function mouseOutMenuButtonEvent(e) {
-    if (e.target !== e.currentTarget) {
-        var schmunderline = e.target.children;
-        ButtonHoverOut(schmunderline[0]); 
-    }
-    e.stopPropagation();
-}
 /*eslint-disable*/
 function CardPopin() {
 	for (var i = 0; i < cards.length; ++i) {
@@ -88,17 +73,3 @@ function CardPopin() {
 	}
 }
 /*eslint-enable*/
-
-function ButtonHover(object) {
-	object.style.animationName = "borderWidth";
-	object.style.animationDuration = "0.2s";
-	object.style.height = "5px";
-
-
-}
-
-function ButtonHoverOut(object) {
-	object.style.animationName = "borderWidthOut";
-	object.style.animationDuration = "0.2s";
-	object.style.height = "0px";
-}
