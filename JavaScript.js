@@ -13,8 +13,47 @@ cardsParent.addEventListener("mouseover", mouseOverCardEvent);
 cardsParent.addEventListener("mouseout", mouseOutCardEvent);
 
 var  menubuttonsParent = document.querySelector("#menu-buttons");
-menubuttonsParent.addEventListener("mouseover", mouseOverMenuButtonEvent);
-menubuttonsParent.addEventListener("mouseout", mouseOutMenuButtonEvent);
+$(".menu-button").mouseover(mouseOverMenuButtonUnderline);
+$(".menu-button").mouseout(mouseOutMenuButtonUnderline);
+$(".underline").mouseover(mouseOverMenuButtonUnderline2);
+$(".underline").mouseout(mouseOutMenuButtonUnderline2);
+
+function mouseOverMenuButtonUnderline(e) {
+    var schmunderline = e.target.children;
+    schmunderline[0].style.animationName = "borderWidth";
+    schmunderline[0].style.animationDuration = "0.2s";
+    schmunderline[0].style.height = "5px";
+  
+}
+
+function mouseOutMenuButtonUnderline(e) {
+    var schmunderline = e.target.children;
+    schmunderline[0].style.animationName = "borderWidthOut";
+    schmunderline[0].style.animationDuration = "0.2s";
+    schmunderline[0].style.height = "0px";
+  
+}
+
+function mouseOverMenuButtonUnderline2(e) {
+    var schmunderline = e.currentTarget;
+    schmunderline.style.animationName = "borderWidth";
+    schmunderline.style.animationDuration = "0.2s";
+    schmunderline.style.height = "5px";
+  
+}
+
+function mouseOutMenuButtonUnderline2(e) {
+    var schmunderline = e.currentTarget;
+    schmunderline.style.animationName = "borderWidthOut";
+    schmunderline.style.animationDuration = "0.2s";
+    schmunderline.style.height = "0px";
+  
+}
+   
+
+
+
+
 
 function mouseOverCardEvent(e) {
     if (e.target !== e.currentTarget) {
