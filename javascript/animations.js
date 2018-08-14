@@ -9,7 +9,7 @@ for (var i = 0; i < cards.length; ++i) {
     logos[i].number = i;
 }
 
-var  cardsParent = document.querySelector("#hero-section-3");
+var  cardsParent = document.querySelector("#main-section-3");
 cardsParent.addEventListener("mouseover", mouseOverCardEvent);
 cardsParent.addEventListener("mouseout", mouseOutCardEvent);
 
