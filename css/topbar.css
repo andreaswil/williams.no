@@ -21,12 +21,6 @@
 	align-items: flex-end;
 }
 
-.Underline {
-	background-color: white;
-	width: inherit;
-	height: 0px; 
-}
-
 #home {
 	margin-left: 20px;
 	margin-right: 30px;
@@ -50,4 +44,20 @@
 
 #gallery {
 	margin-right: 30px;
+}
+
+.Underline {
+	background-color: white;
+	width: inherit;
+	height: 0px; 
+}
+
+@keyframes underlineVisible {
+	from {height: 0px; }
+	to {height: 5px ; }
+}
+
+@keyframes underlineHide {
+	from {height: 5px; }
+	to {height: 0px ; }
 }

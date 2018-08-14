@@ -2,11 +2,11 @@
 /*eslint-env jquery*/
 
 var cards = document.getElementsByClassName("card-box");
-var logos = document.getElementsByClassName("logos");
+var icons = document.getElementsByClassName("icons");
 
 for (var i = 0; i < cards.length; ++i) {
 	cards[i].number = i;
-    logos[i].number = i;
+    icons[i].number = i;
 }
 
 var  cardsParent = document.querySelector("#main-section-3");
@@ -20,7 +20,7 @@ $(".underline").mouseout(mouseOutMenuButtonUnderline);
 
 function mouseOverMenuButton(e) {
     var children = e.target.children;
-    children[0].style.animationName = "borderWidth";
+    children[0].style.animationName = "underlineVisible";
     children[0].style.animationDuration = "0.2s";
     children[0].style.height = "5px";
   
@@ -28,7 +28,7 @@ function mouseOverMenuButton(e) {
 
 function mouseOutMenuButton(e) {
     var children = e.target.children;
-    children[0].style.animationName = "borderWidthOut";
+    children[0].style.animationName = "underlineHide";
     children[0].style.animationDuration = "0.2s";
     children[0].style.height = "0px";
   
@@ -36,7 +36,7 @@ function mouseOutMenuButton(e) {
 
 function mouseOverMenuButtonUnderline(e) {
     var underline = e.currentTarget;
-    underline.style.animationName = "borderWidth";
+    underline.style.animationName = "underlineVisible";
     underline.style.animationDuration = "0.2s";
     underline.style.height = "5px";
   
@@ -44,7 +44,7 @@ function mouseOverMenuButtonUnderline(e) {
 
 function mouseOutMenuButtonUnderline(e) {
     var underline = e.currentTarget;
-    underline.style.animationName = "borderWidthOut";
+    underline.style.animationName = "underlineHide";
     underline.style.animationDuration = "0.2s";
     underline.style.height = "0px";
   
