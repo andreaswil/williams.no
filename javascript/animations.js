@@ -1,16 +1,16 @@
 /*eslint-env browser*/
 /*eslint-env jquery*/
 
-/* Gets a list of the cards in main-section-3 */ 
+/* Gets a list of the cards in main-section-3 */
 var cards = document.getElementsByClassName("card-box");
 
 /*Goes through the cards list and sets the opacity to 100 in their corresponding css code*/
 /*eslint-disable*/
 function CardPopin() {
-	for (var i = 0; i < cards.length; ++i) {
-		var card = cards [i];
-		card.style.opacity = "100";
-	}
+    for (var i = 0; i < cards.length; ++i) {
+        var card = cards[i];
+        card.style.opacity = "100";
+    }
 }
 /*eslint-enable*/
 
@@ -24,7 +24,7 @@ $(".underline").mouseout(mouseOutMenuButtonUnderline);
 
 /* Scales the card when hovering */
 function mouseOverCardEvent(e) {
-    e.currentTarget.style.transform = "scale(1.1)";   
+    e.currentTarget.style.transform = "scale(1.1)";
 }
 
 /* Scales the card back to original scale when hovering */
@@ -44,7 +44,7 @@ function mouseOutMenuButton(e) {
     e.target.children[0].style.animationName = "underlineHide";
     e.target.children[0].style.animationDuration = "0.2s";
     e.target.children[0].style.height = "0px";
-  
+
 }
 
 /* Makes the underline seem like a part of the button, preventing the underline from hiding when the cursor moves from the menu button to the underline */
@@ -58,16 +58,16 @@ function mouseOverMenuButtonUnderline(e) {
 function mouseOutMenuButtonUnderline(e) {
     e.currentTarget.style.animationName = "underlineHide";
     e.currentTarget.style.animationDuration = "0.2s";
-    e.currentTarget.style.height = "0px"; 
+    e.currentTarget.style.height = "0px";
 }
 
 /* Runs when document is finished loading, every div wrapped in a div with class cover will fade in, as to make the loading of the page more fluid */
-$(document).ready(function() {
+$(document).ready(function () {
     var children = $(".cover");
     for (var i = 0; i < children.length; ++i) {
         children[i].style.animationName = "whenLoadedFadeIn";
         children[i].style.animationDuration = "2s";
         children[i].style.opacity = "100";
-        
+
     }
 });
