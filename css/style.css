@@ -7,25 +7,6 @@ body {
 	margin-right: 0;
 }
 
-/*
-#title {
-	position: absolute;
-	left: 30px;
-	bottom: 0px;
-	color: white;
-	font-size: 45px;
-	font-family: Verdana, sans-serif;
-	height: 56px;
-}
-
-#Williams-header {
-	position: absolute;
-	left: 0px;
-	height: 100px;
-	bottom: 0px;
-}
-*/
-
 #top-bar {
 	display: flex;
 	background-color: #485167;
@@ -53,14 +34,6 @@ body {
 	background-color: white;
 	width: inherit;
 	height: 0px; 
-}
-
-
-@keyframes examples {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
 }
 
 #home {
@@ -254,7 +227,7 @@ body {
 
 #hero-section-2 {
 	display: flex;
-	background-image: url("kamera.jpg");
+	background-image: url(kamera.jpg);
 	flex-direction: column;
 	justify-content: flex-start;
 	height: 500px;
