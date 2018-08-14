@@ -60,3 +60,8 @@ function mouseOutMenuButtonUnderline(e) {
     e.currentTarget.style.animationDuration = "0.2s";
     e.currentTarget.style.height = "0px"; 
 }
+
+
+$(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+});
