@@ -61,6 +61,7 @@ function mouseOutMenuButtonUnderline(e) {
     e.currentTarget.style.height = "0px"; 
 }
 
+/* Runs when document is finished loading, every div wrapped in a div with class cover will fade in, as to make the loading of the page more fluid */
 $(document).ready(function() {
     var children = $(".cover");
     for (var i = 0; i < children.length; ++i) {
