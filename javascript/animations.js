@@ -49,18 +49,14 @@ function mouseOutMenuButton(e) {
 
 /* Makes the underline seem like a part of the button, preventing the underline from hiding when the cursor moves from the menu button to the underline */
 function mouseOverMenuButtonUnderline(e) {
-    var underline = e.currentTarget;
-    underline.style.animationName = "underlineVisible";
-    underline.style.animationDuration = "0.2s";
-    underline.style.height = "5px";
-  
+    e.currentTarget.style.animationName = "underlineVisible";
+    e.currentTarget.style.animationDuration = "0.2s";
+    e.currentTarget.style.height = "5px";
 }
 
 /* Makes the underline hide when the cursor leaves the underline */
 function mouseOutMenuButtonUnderline(e) {
-    var underline = e.currentTarget;
-    underline.style.animationName = "underlineHide";
-    underline.style.animationDuration = "0.2s";
-    underline.style.height = "0px";
-  
+    e.currentTarget.style.animationName = "underlineHide";
+    e.currentTarget.style.animationDuration = "0.2s";
+    e.currentTarget.style.height = "0px"; 
 }

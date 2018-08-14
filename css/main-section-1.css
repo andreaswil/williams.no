@@ -13,18 +13,20 @@
 	flex-direction: column;
 	background-color: #485167;
 	margin-top: 70px;
+    margin-bottom: 0px;
 	width: 300px;
 	height: 250px;
 	margin-right: 175px;
 }
 
 .main-section-1-logo-text{
-	display: flex;
-	width:360px;
-	font-family: apercu-regular,sans-serif;
+    display: flex;
+	width: 360px;
+	font-family: apercu-regular, sans-serif;
 	font-size: 72px;
 	color: #fff;
 	margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #main-section-1-logo-pillar-1 {
