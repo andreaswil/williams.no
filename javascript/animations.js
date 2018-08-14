@@ -61,7 +61,8 @@ function mouseOutMenuButtonUnderline(e) {
     e.currentTarget.style.height = "0px"; 
 }
 
-
 $(document).ready(function() {
-  document.getElementsByTagName("html")[0].style.visibility = "visible";
+    document.getElementsByTagName("body")[0].style.animationName = "bodyFadeIn";
+    document.getElementsByTagName("body")[0].style.animationDuration = "0.5s";
+    document.getElementsByTagName("body")[0].style.opacity = "100";
 });

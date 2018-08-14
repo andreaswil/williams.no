@@ -1,8 +1,6 @@
-html { 
-    visibility: hidden; 
-}
-
 body {
+    background-color: #485167; 
+    opacity: 0;
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -14,4 +12,9 @@ body {
 a {
 	text-decoration: none;
 	color: white;
+}
+
+@keyframes bodyFadeIn {
+    from {opacity: 0;}
+    to {opacity: 100;}
 }
