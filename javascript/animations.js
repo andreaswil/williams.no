@@ -1,29 +1,34 @@
 /*eslint-env browser*/
 /*eslint-env jquery*/
 
+/* Gets a list of the cards in main-section-3 */ 
 var cards = document.getElementsByClassName("card-box");
-var icons = document.getElementsByClassName("icons");
 
-for (var i = 0; i < cards.length; ++i) {
-	cards[i].number = i;
-    icons[i].number = i;
+/*Goes through the cards list and sets the opacity to 100 in their corresponding css code*/
+/*eslint-disable*/
+function CardPopin() {
+	for (var i = 0; i < cards.length; ++i) {
+		var card = cards [i];
+		card.style.opacity = "100";
+	}
 }
+/*eslint-enable*/
 
-var  cardsParent = document.querySelector("#main-section-3");
-cardsParent.addEventListener("mouseover", mouseOverCardEvent);
-cardsParent.addEventListener("mouseout", mouseOutCardEvent);
+/* Event listeners for mouse hovering over menu buttons and cards */
 
+$(".card-box").mouseover(mouseOverCardEvent);
+$(".card-box").mouseout(mouseOutCardEvent);
 $(".menu-button").mouseover(mouseOverMenuButton);
 $(".menu-button").mouseout(mouseOutMenuButton);
 $(".underline").mouseover(mouseOverMenuButtonUnderline);
 $(".underline").mouseout(mouseOutMenuButtonUnderline);
 
+
 function mouseOverMenuButton(e) {
     var children = e.target.children;
     children[0].style.animationName = "underlineVisible";
     children[0].style.animationDuration = "0.2s";
-    children[0].style.height = "5px";
-  
+    children[0].style.height = "5px";  
 }
 
 function mouseOutMenuButton(e) {
@@ -51,25 +56,9 @@ function mouseOutMenuButtonUnderline(e) {
 }
    
 function mouseOverCardEvent(e) {
-    if (e.target !== e.currentTarget) {
-       cards[e.target.number].style.transform = "scale(1.2)";   
-    }
-    e.stopPropagation();
+    e.currentTarget.style.transform = "scale(1.2)";   
 }
 
 function mouseOutCardEvent(e) {
-    if (e.target !== e.currentTarget) {
-        cards[e.target.number].style.transform = "scale(1)"
-        
-    }
-    e.stopPropagation();
+    e.currentTarget.style.transform = "scale(1)";
 }
-
-/*eslint-disable*/
-function CardPopin() {
-	for (var i = 0; i < cards.length; ++i) {
-		var card = cards [i];
-		card.style.opacity = "100";
-	}
-}
-/*eslint-enable*/
