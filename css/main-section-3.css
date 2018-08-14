@@ -40,9 +40,7 @@
     width: 200px;
     margin-top: 70px;
     background-color: #EAE6DA;
-    transition: opacity 5s, transform 1s;
-    animation-name: fadeIn;
-    animation-duration: 2s;
+    transition: opacity 2s, transform 1s;
 }
 
 .card-box:hover {

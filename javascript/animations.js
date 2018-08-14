@@ -12,6 +12,13 @@ function CardPopin() {
         card.style.opacity = "100";
     }
 }
+
+function CardPopout() {
+    for (var i = 0; i < cards.length; ++i) {
+        var card = cards[i];
+        card.style.opacity = "0";
+    }
+}
 /*eslint-enable*/
 
 /* Event listeners for mouse hovering over menu buttons and cards */
@@ -69,5 +76,23 @@ $(document).ready(function () {
         children[i].style.animationDuration = "2s";
         children[i].style.opacity = "100";
 
+    }
+});
+
+/* Extends Jquery with a viewport function. The viewport function checks if an elemnt is in the current viewport*/
+
+$.fn.isItVisible = function () {
+    var elementTop = $(this).offset().top; /*Top position of our current HTML element*/
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on("resize scroll", function () {
+    if ($(".card-box").isItVisible()) {
+        CardPopin();
+    } else {
+        CardPopout();
     }
 });
