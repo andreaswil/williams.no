@@ -61,7 +61,7 @@ body {
 	margin-right: 30px;
 }
 
-#hero-section-1 {
+#main-section-1 {
 	display: flex;
 	justify-content: center;
 	height: 400px;
@@ -71,72 +71,34 @@ body {
 	background-color: #485167;
 }
 
-#hero-section-3-infobox1{
+#main-section-3-card-1{
 	display: flex;
 	justify-content: center;
 	color: white;
 	background-color:#485167;
 }
 
-.far {
+#main-section-3-card-2{
+	display: flex;
+	justify-content: center;
+	color: white;
+	background-color:#485167;
+}
+
+#main-section-3-card-3{
+	display: flex;
+	justify-content: center;
+	color: white;
+	background-color:#485167;
+}
+
+.logos {
 	margin-top: 20px;
 	font-size: 6em;
 }
 
-.fas {
-	margin-top: 20px;
-	font-size: 6em;
-}
 
-#hero-section-3-infobox2{
-	display: flex;
-	justify-content: center;
-	color: white;
-	background-color:#485167;
-}
-
-#hero-section-3-infobox3{
-	display: flex;
-	justify-content: center;
-	color: white;
-	background-color:#485167;
-
-
-}
-
-#hero-section-4-cardbox-1 {
-	display: flex;
-	background-color: #7F4145;
-	margin-left:0;
-	width: 360px;
-	height: 400px;
-	
-}
-
-#hero-section-4-cardbox-2 {
-	display: flex;
-	background-color: #7F4145;
-	margin-top: 70px;
-	margin-left:auto;
-	margin-right:auto;
-	width: 720px;
-	height: 250px;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-#hero-section-4 {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	height: 400px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	
-}
-
-#hero-section-1-cardbox {
+#main-section-1-logo-text-frame {
 	display: flex;
 	flex-direction: column;
 	background-color: #485167;
@@ -146,7 +108,7 @@ body {
 	margin-right: 175px;
 }
 
-.hero-section-1-cardbox-text {
+.main-section-1-logo-text{
 	display: flex;
 	width:360px;
 	font-family: apercu-regular,sans-serif;
@@ -155,34 +117,34 @@ body {
 	margin-top: 0px;
 }
 
-#hero-section-1-stang {
+#main-section-1-logo-pillar-1 {
 	background-color: #F1EA7F;
 	height: 250px;
 	width: 40px;
 	margin-top: 70px;
 }
-#hero-section-2-stang {
+#main-section-1-logo-pillar-2 {
 	background-color: #7F4145;
 	height: 250px;
 	width: 40px;
 	margin-top: 70px;
 }
 
-#hero-section-3-stang {
+#main-section-1-logo-pillar-3 {
 	background-color: #BE9EC9;
 	height: 250px;
 	width: 40px;
 	margin-top: 70px;
 }
 
-#hero-section-4-stang {
+#main-section-1-logo-pillar-4 {
 	background-color: #D1B894;
 	height: 250px;
 	width: 40px;
 	margin-top: 70px;
 }
 
-#hero-section-5-stang {
+#main-section-1-logo-pillar-5 {
 	background-color: #EC9787;
 	height: 250px;
 	width: 40px;
@@ -225,9 +187,9 @@ body {
 	to {height: 0px ; }
 }
 
-#hero-section-2 {
+#main-section-2 {
 	display: flex;
-	background-image: url(kamera.jpg);
+	background-image: url("../pictures/kamera.jpg");
 	flex-direction: column;
 	justify-content: flex-start;
 	height: 500px;
@@ -242,7 +204,7 @@ body {
     background-size: cover;
 }
 
-#hero-section-3 {
+#main-section-3 {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -277,7 +239,6 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #485167;
-
 }
 
 
