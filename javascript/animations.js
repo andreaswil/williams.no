@@ -62,7 +62,11 @@ function mouseOutMenuButtonUnderline(e) {
 }
 
 $(document).ready(function() {
-    document.getElementsByTagName("body")[0].style.animationName = "bodyFadeIn";
-    document.getElementsByTagName("body")[0].style.animationDuration = "0.5s";
-    document.getElementsByTagName("body")[0].style.opacity = "100";
+    var children = $(".cover");
+    for (var i = 0; i < children.length; ++i) {
+        children[i].style.animationName = "whenLoadedFadeIn";
+        children[i].style.animationDuration = "2s";
+        children[i].style.opacity = "100";
+        
+    }
 });
