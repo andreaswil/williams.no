@@ -1,7 +1,7 @@
 /*eslint-env browser*/
 /*eslint-env jquery*/
 
-var cards = document.getElementsByClassName("infobox");
+var cards = document.getElementsByClassName("card-box");
 var logos = document.getElementsByClassName("logos");
 
 for (var i = 0; i < cards.length; ++i) {
