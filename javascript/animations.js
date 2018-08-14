@@ -22,13 +22,24 @@ $(".menu-button").mouseout(mouseOutMenuButton);
 $(".underline").mouseover(mouseOverMenuButtonUnderline);
 $(".underline").mouseout(mouseOutMenuButtonUnderline);
 
+/* Scales the card when hovering */
+function mouseOverCardEvent(e) {
+    e.currentTarget.style.transform = "scale(1.1)";   
+}
 
+/* Scales the card back to original scale when hovering */
+function mouseOutCardEvent(e) {
+    e.currentTarget.style.transform = "scale(1)";
+}
+
+/* Gets the children of the menu button (the underline), and activates the animation which makes it visible, when the cursor is hovering the menu button */
 function mouseOverMenuButton(e) {
     e.target.children[0].style.animationName = "underlineVisible";
     e.target.children[0].style.animationDuration = "0.2s";
     e.target.children[0].style.height = "5px";
 }
 
+/* Gets the children of the menu button (the underline), and activates the animation which makes it hidden, when the cursor leaves the menu button */
 function mouseOutMenuButton(e) {
     e.target.children[0].style.animationName = "underlineHide";
     e.target.children[0].style.animationDuration = "0.2s";
@@ -36,6 +47,7 @@ function mouseOutMenuButton(e) {
   
 }
 
+/* Makes the underline seem like a part of the button, preventing the underline from hiding when the cursor moves from the menu button to the underline */
 function mouseOverMenuButtonUnderline(e) {
     var underline = e.currentTarget;
     underline.style.animationName = "underlineVisible";
@@ -44,18 +56,11 @@ function mouseOverMenuButtonUnderline(e) {
   
 }
 
+/* Makes the underline hide when the cursor leaves the underline */
 function mouseOutMenuButtonUnderline(e) {
     var underline = e.currentTarget;
     underline.style.animationName = "underlineHide";
     underline.style.animationDuration = "0.2s";
     underline.style.height = "0px";
   
-}
-   
-function mouseOverCardEvent(e) {
-    e.currentTarget.style.transform = "scale(1.2)";   
-}
-
-function mouseOutCardEvent(e) {
-    e.currentTarget.style.transform = "scale(1)";
 }
