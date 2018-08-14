@@ -16,7 +16,9 @@ function CardPopin() {
 function CardPopout() {
     for (var i = 0; i < cards.length; ++i) {
         var card = cards[i];
+        card.style.transition = "opacity 0s";
         card.style.opacity = "0";
+        card.style.transition = "opacity 2s, transform 1s";
     }
 }
 /*eslint-enable*/
