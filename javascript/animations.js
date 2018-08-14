@@ -15,7 +15,6 @@ function CardPopin() {
 /*eslint-enable*/
 
 /* Event listeners for mouse hovering over menu buttons and cards */
-
 $(".card-box").mouseover(mouseOverCardEvent);
 $(".card-box").mouseout(mouseOutCardEvent);
 $(".menu-button").mouseover(mouseOverMenuButton);
@@ -25,17 +24,15 @@ $(".underline").mouseout(mouseOutMenuButtonUnderline);
 
 
 function mouseOverMenuButton(e) {
-    var children = e.target.children;
-    children[0].style.animationName = "underlineVisible";
-    children[0].style.animationDuration = "0.2s";
-    children[0].style.height = "5px";  
+    e.target.children[0].style.animationName = "underlineVisible";
+    e.target.children[0].style.animationDuration = "0.2s";
+    e.target.children[0].style.height = "5px";
 }
 
 function mouseOutMenuButton(e) {
-    var children = e.target.children;
-    children[0].style.animationName = "underlineHide";
-    children[0].style.animationDuration = "0.2s";
-    children[0].style.height = "0px";
+    e.target.children[0].style.animationName = "underlineHide";
+    e.target.children[0].style.animationDuration = "0.2s";
+    e.target.children[0].style.height = "0px";
   
 }
 
